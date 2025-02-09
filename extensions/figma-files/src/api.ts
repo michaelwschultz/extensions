@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 import { LocalStorage, Toast, environment, getPreferenceValues, showToast } from "@raycast/api";
 import { getAccessToken } from "@raycast/utils";
 import fetch, { type RequestInit } from "node-fetch";
 import type { FileDetail, ProjectFiles, TeamFiles, TeamProjects } from "./types";
-=======
-import { getPreferenceValues, showToast, Toast, LocalStorage, environment } from "@raycast/api";
-import fetch, { RequestInit } from "node-fetch";
-import { ProjectFiles, TeamFiles, TeamProjects } from "./types";
-import { getAccessToken } from "@raycast/utils";
-import type { FileDetail } from "./types";
->>>>>>> contributions/merge-1739071813690
 
 async function request<T>(path: string, opts?: RequestInit) {
   const { PERSONAL_ACCESS_TOKEN } = getPreferenceValues();
@@ -84,11 +76,7 @@ async function fetchFiles(): Promise<ProjectFiles[][]> {
 
 export async function resolveAllFiles(): Promise<TeamFiles[]> {
   const teamFiles = await fetchFiles();
-<<<<<<< HEAD
   const teams = ((await LocalStorage.getItem<string>("teamNames")) ?? "").split(",");
-=======
-  const teams = ((await LocalStorage.getItem<string>("teamNames")) || "").split(",");
->>>>>>> contributions/merge-1739071813690
   const fi = teamFiles.map((projectFiles, index) => {
     return { name: teams[index], files: projectFiles } as TeamFiles;
   });
