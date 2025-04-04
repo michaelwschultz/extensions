@@ -1,6 +1,6 @@
 import { Action, ActionPanel, type Application, Grid, Icon } from "@raycast/api";
 import type { File } from "../types";
-import DevelopmentActionSection from "./DevelopmentActionSection";
+import AdvancedActionSection from "./AdvancedActionSection";
 import { OpenBranchSubmenuAction } from "./OpenBranchSubmenuAction";
 import { OpenPageSubmenuAction } from "./OpenPageSubmenuAction";
 import { OpenProjectFileAction } from "./OpenProjectFileAction";
@@ -48,7 +48,7 @@ export default function FileGridItem(props: {
             {file.branches && <OpenBranchSubmenuAction file={props.file} desktopApp={desktopApp} />}
             <OpenPageSubmenuAction file={props.file} desktopApp={desktopApp} onVisit={onVisit} />
           </ActionPanel.Section>
-          <DevelopmentActionSection />
+          <AdvancedActionSection />
         </ActionPanel>
       }
     />
