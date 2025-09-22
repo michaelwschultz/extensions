@@ -9,9 +9,9 @@ The extension includes two commands, **Recent Treatments** and **Log Treatment**
 ### Recent Treatments (command)
 Display your last three treatments.
 
-![Recent Treatments](./assets/recent-treatments.png)
+![Recent Treatments](./metadata/recent-treatments.png)
 
 ### Log Treatment (command)
 Log a new treatment including the type, date, bleed location, and reason.
 
-![Log Treatment](./assets/log-treatment.png)
+![Log Treatment](./metadata/log-treatment.png)
