@@ -30,7 +30,7 @@ export default function LogTreatments() {
 }
 
 async function logTreatment(values: Form.Values, setIsLoading: (isLoading: boolean) => void) {
-  const preferences: Preferences = getPreferenceValues();
+  const preferences = getPreferenceValues();
   const { API_KEY } = preferences;
   setIsLoading(true);
 
