@@ -11,7 +11,7 @@ export type Treatment = {
 };
 
 export default function recentTreatments() {
-  const preferences: Preferences = getPreferenceValues();
+  const preferences = getPreferenceValues();
   const { API_KEY } = preferences;
 
   const { isLoading, data, error } = useFetch<Treatment[]>(
